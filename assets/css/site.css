@@ -1,0 +1,27 @@
+/* Small custom layer for brand polish beyond Tailwind utilities */
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* More visible focus for keyboard users */
+:focus-visible {
+  outline: 2px solid #D8B25C;
+  outline-offset: 2px;
+}
+
+.bg-mesh {
+  background-image:
+    radial-gradient(900px 400px at 10% 10%, rgba(216, 178, 92, 0.22), transparent 55%),
+    radial-gradient(700px 360px at 90% 20%, rgba(5, 150, 105, 0.22), transparent 55%),
+    radial-gradient(600px 320px at 60% 100%, rgba(216, 178, 92, 0.12), transparent 55%);
+}
+
+/* Optional: prevent layout shift when carousel hides non-active slides */
+[data-carousel] [data-slide] {
+  display: none;
+}
+[data-carousel] [data-slide].is-active {
+  display: block;
+}
+
