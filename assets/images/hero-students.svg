@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-label="Students illustration">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0B1220"/>
+      <stop offset="1" stop-color="#052e2a"/>
+    </linearGradient>
+    <radialGradient id="emeraldGlow" cx="65%" cy="30%" r="55%">
+      <stop offset="0" stop-color="#059669" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#059669" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f2a24"/>
+      <stop offset="1" stop-color="#081f1b"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg2)"/>
+  <rect width="1600" height="900" fill="url(#emeraldGlow)"/>
+
+  <!-- screen / class board -->
+  <g transform="translate(290 170)">
+    <rect x="0" y="0" width="1020" height="520" rx="28" fill="url(#card)" stroke="#D8B25C" stroke-opacity="0.55" stroke-width="10"/>
+    <rect x="60" y="60" width="900" height="360" rx="22" fill="#041c1a" opacity="0.95"/>
+    <g fill="#F3E6C7" opacity="0.85">
+      <rect x="120" y="120" width="520" height="18" rx="9"/>
+      <rect x="120" y="170" width="720" height="14" rx="7" opacity="0.65"/>
+      <rect x="120" y="210" width="660" height="14" rx="7" opacity="0.65"/>
+      <rect x="120" y="250" width="560" height="14" rx="7" opacity="0.65"/>
+    </g>
+    <rect x="60" y="450" width="900" height="20" rx="10" fill="#059669" opacity="0.65"/>
+  </g>
+
+  <!-- students -->
+  <g transform="translate(420 650)">
+    <g transform="translate(0 0)">
+      <circle cx="140" cy="60" r="42" fill="#F3E6C7" opacity="0.9"/>
+      <path d="M70 210v-52c0-42 34-76 76-76h0c42 0 76 34 76 76v52H70Z" fill="#059669" opacity="0.9"/>
+      <path d="M92 120c18 18 34 26 48 26s30-8 48-26" fill="none" stroke="#0B1220" stroke-width="10" opacity="0.25"/>
+    </g>
+    <g transform="translate(320 0)">
+      <circle cx="140" cy="60" r="42" fill="#F3E6C7" opacity="0.9"/>
+      <path d="M70 210v-52c0-42 34-76 76-76h0c42 0 76 34 76 76v52H70Z" fill="#047857" opacity="0.92"/>
+      <path d="M92 120c18 18 34 26 48 26s30-8 48-26" fill="none" stroke="#0B1220" stroke-width="10" opacity="0.25"/>
+    </g>
+  </g>
+
+  <!-- ground -->
+  <path d="M0 780C260 740 420 820 800 790s540-90 800-30v160H0Z" fill="#041c1a" opacity="0.95"/>
+  <rect width="1600" height="900" fill="#000" opacity="0.10"/>
+</svg>
+
