@@ -8,14 +8,23 @@
       name="description"
       content="Amina Quran Academy provides authentic, interactive online Quran & Islamic studies for kids and adults. One-on-one classes, 24/7 flexibility, qualified male & female tutors, and a money-back guarantee. Book a free trial."
     />
+    <meta name="theme-color" content="#059669" />
     <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700;9..144,800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
 
     <script src="assets/js/tailwind-config.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="assets/css/site.css" />
   </head>
 
-  <body class="min-h-screen bg-white text-slate-900 antialiased">
+  <body class="min-h-screen bg-white font-sans text-slate-900 antialiased">
+    <a class="skip-link" href="#main">Skip to content</a>
     <!-- Top bar -->
     <div class="bg-brand-ink text-white">
       <div class="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-3 px-4 py-2 text-sm">
@@ -48,15 +57,16 @@
     </div>
 
     <!-- Header -->
-    <header class="sticky top-0 z-50 border-b border-slate-200/70 bg-white/80 backdrop-blur">
+    <header class="sticky top-0 z-50 glass-header">
       <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-4">
         <a href="index.html" class="group inline-flex items-center gap-3">
-          <span
-            class="grid h-11 w-11 place-items-center rounded-2xl bg-brand-emerald text-white shadow-soft ring-1 ring-black/5"
-            aria-hidden="true"
-          >
-            <span class="text-lg font-black">A</span>
-          </span>
+          <img
+            src="assets/images/logo-mark.svg"
+            alt="Amina Quran Academy"
+            class="h-11 w-11 rounded-2xl shadow-soft ring-1 ring-black/5"
+            loading="eager"
+            decoding="async"
+          />
           <span class="leading-tight">
             <span class="block text-base font-extrabold tracking-tight text-slate-900 group-hover:text-brand-emerald"
               >Amina Quran Academy</span
@@ -66,23 +76,23 @@
         </a>
 
         <nav class="hidden items-center gap-2 md:flex" aria-label="Primary">
-          <a class="rounded-lg px-3 py-2 text-sm font-semibold text-brand-emerald" href="index.html" aria-current="page"
+          <a class="nav-link rounded-lg px-3 py-2 text-sm font-semibold text-brand-emerald" href="index.html" aria-current="page"
             >Home</a
           >
-          <a class="rounded-lg px-3 py-2 text-sm font-semibold text-slate-700 hover:text-brand-emerald" href="about.html"
+          <a class="nav-link rounded-lg px-3 py-2 text-sm font-semibold text-slate-700 hover:text-brand-emerald" href="about.html"
             >About</a
           >
-          <a class="rounded-lg px-3 py-2 text-sm font-semibold text-slate-700 hover:text-brand-emerald" href="courses.html"
+          <a class="nav-link rounded-lg px-3 py-2 text-sm font-semibold text-slate-700 hover:text-brand-emerald" href="courses.html"
             >Courses</a
           >
-          <a class="rounded-lg px-3 py-2 text-sm font-semibold text-slate-700 hover:text-brand-emerald" href="fees.html"
+          <a class="nav-link rounded-lg px-3 py-2 text-sm font-semibold text-slate-700 hover:text-brand-emerald" href="fees.html"
             >Fees</a
           >
-          <a class="rounded-lg px-3 py-2 text-sm font-semibold text-slate-700 hover:text-brand-emerald" href="contact.html"
+          <a class="nav-link rounded-lg px-3 py-2 text-sm font-semibold text-slate-700 hover:text-brand-emerald" href="contact.html"
             >Contact</a
           >
           <a
-            class="rounded-lg px-3 py-2 text-sm font-semibold text-slate-700 hover:text-brand-emerald"
+            class="nav-link rounded-lg px-3 py-2 text-sm font-semibold text-slate-700 hover:text-brand-emerald"
             href="resources/index.html"
             >Resources</a
           >
@@ -90,7 +100,7 @@
 
         <div class="flex items-center gap-2">
           <a
-            class="hidden rounded-xl bg-brand-emerald px-4 py-2 text-sm font-semibold text-white shadow-soft hover:bg-brand-emeraldDark md:inline-flex"
+            class="btn-primary hidden rounded-xl px-4 py-2 text-sm font-semibold text-white shadow-soft md:inline-flex"
             href="https://wa.me/9203138883254?text=Assalam-o-Alaikum%2C%20I%27d%20like%20to%20book%20a%20free%20trial%20at%20Amina%20Quran%20Academy."
             target="_blank"
             rel="noopener"
@@ -101,37 +111,41 @@
             type="button"
             aria-label="Open menu"
             aria-expanded="false"
+            aria-controls="mobile-menu"
             data-nav-toggle
           >
-            <span aria-hidden="true">Menu</span>
+            <span class="sr-only">Open menu</span>
+            <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16" />
+            </svg>
           </button>
         </div>
       </div>
 
       <!-- Mobile nav panel -->
-      <div class="hidden border-t border-slate-200 bg-white md:hidden" data-nav-panel>
+      <div id="mobile-menu" class="hidden border-t border-slate-200 bg-white md:hidden" data-nav-panel hidden>
         <nav class="mx-auto max-w-7xl px-4 py-3" aria-label="Mobile">
           <div class="grid gap-1">
-            <a class="rounded-lg px-3 py-2 text-sm font-semibold text-brand-emerald" href="index.html" aria-current="page"
+            <a class="nav-link rounded-lg px-3 py-2 text-sm font-semibold text-brand-emerald" href="index.html" aria-current="page"
               >Home</a
             >
-            <a class="rounded-lg px-3 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50" href="about.html"
+            <a class="nav-link rounded-lg px-3 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50" href="about.html"
               >About</a
             >
-            <a class="rounded-lg px-3 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50" href="courses.html"
+            <a class="nav-link rounded-lg px-3 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50" href="courses.html"
               >Courses</a
             >
-            <a class="rounded-lg px-3 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50" href="fees.html"
+            <a class="nav-link rounded-lg px-3 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50" href="fees.html"
               >Fees</a
             >
-            <a class="rounded-lg px-3 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50" href="contact.html"
+            <a class="nav-link rounded-lg px-3 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50" href="contact.html"
               >Contact</a
             >
-            <a class="rounded-lg px-3 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50" href="resources/index.html"
+            <a class="nav-link rounded-lg px-3 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50" href="resources/index.html"
               >Resources</a
             >
             <a
-              class="mt-2 inline-flex items-center justify-center rounded-xl bg-brand-emerald px-4 py-2 text-sm font-semibold text-white shadow-soft hover:bg-brand-emeraldDark"
+              class="btn-primary mt-2 inline-flex items-center justify-center rounded-xl px-4 py-2 text-sm font-semibold text-white shadow-soft"
               href="https://wa.me/9203138883254?text=Assalam-o-Alaikum%2C%20I%27d%20like%20to%20book%20a%20free%20trial%20at%20Amina%20Quran%20Academy."
               target="_blank"
               rel="noopener"
@@ -142,10 +156,12 @@
       </div>
     </header>
 
-    <main>
+    <main id="main">
       <!-- Hero -->
       <section class="relative overflow-hidden bg-brand-ink">
-        <div class="absolute inset-0 bg-mesh opacity-90"></div>
+        <div class="absolute inset-0 bg-geometric opacity-90"></div>
+        <div class="absolute inset-0 bg-mesh opacity-70"></div>
+        <div class="pointer-events-none absolute inset-0 bg-noise"></div>
         <div class="relative mx-auto max-w-7xl px-4 py-10 sm:py-14 lg:py-16">
           <div class="grid items-center gap-10 lg:grid-cols-12">
             <div class="lg:col-span-5">
@@ -153,7 +169,7 @@
                 <span class="h-2 w-2 rounded-full bg-brand-gold"></span>
                 One-on-one online Quran learning • 24/7 flexible schedule
               </p>
-              <h1 class="mt-5 text-3xl font-black tracking-tight text-white sm:text-4xl">
+              <h1 class="hero-title hero-gradient mt-5 text-3xl font-black tracking-tight sm:text-4xl">
                 Connect Your Child with the Qur’an
               </h1>
               <p class="mt-4 text-base leading-relaxed text-white/80">
@@ -163,25 +179,25 @@
 
               <div class="mt-6 flex flex-col gap-3 sm:flex-row">
                 <a
-                  class="inline-flex items-center justify-center rounded-xl bg-brand-emerald px-5 py-3 text-sm font-semibold text-white shadow-soft hover:bg-brand-emeraldDark"
+                  class="btn-primary inline-flex items-center justify-center rounded-xl px-5 py-3 text-sm font-semibold text-white shadow-soft"
                   href="https://wa.me/9203138883254?text=Assalam-o-Alaikum%2C%20I%27d%20like%20to%20book%20a%20free%20trial%20at%20Amina%20Quran%20Academy."
                   target="_blank"
                   rel="noopener"
                   >Enroll Now</a
                 >
                 <a
-                  class="inline-flex items-center justify-center rounded-xl border border-white/20 bg-white/5 px-5 py-3 text-sm font-semibold text-white hover:bg-white/10"
+                  class="btn-secondary inline-flex items-center justify-center rounded-xl px-5 py-3 text-sm font-semibold text-white"
                   href="courses.html"
                   >View Courses</a
                 >
               </div>
 
               <div class="mt-7 grid gap-3 sm:grid-cols-2">
-                <div class="rounded-2xl bg-white/5 p-4 ring-1 ring-white/10">
+                <div class="card rounded-2xl bg-white/5 p-4 ring-1 ring-white/10">
                   <p class="text-sm font-semibold text-white">Female Quran Tutors Available</p>
                   <p class="mt-1 text-sm text-white/75">Certified female teachers for sisters &amp; young girls.</p>
                 </div>
-                <div class="rounded-2xl bg-white/5 p-4 ring-1 ring-white/10">
+                <div class="card rounded-2xl bg-white/5 p-4 ring-1 ring-white/10">
                   <p class="text-sm font-semibold text-white">Money-Back Guarantee</p>
                   <p class="mt-1 text-sm text-white/75">Confidence and trust in our learning services.</p>
                 </div>
@@ -189,11 +205,7 @@
             </div>
 
             <div class="lg:col-span-7">
-              <div
-                data-carousel
-                class="relative overflow-hidden rounded-3xl bg-black/20 shadow-soft ring-1 ring-white/10"
-                aria-label="Hero carousel"
-              >
+              <div data-carousel class="relative overflow-hidden rounded-3xl bg-black/20 shadow-soft ring-1 ring-white/10" aria-label="Hero carousel">
                 <!-- slides -->
                 <div data-slide class="is-active">
                   <img
@@ -291,19 +303,19 @@
       <!-- Trust signals -->
       <section class="border-b border-slate-200 bg-white">
         <div class="mx-auto grid max-w-7xl gap-4 px-4 py-10 sm:grid-cols-2 lg:grid-cols-4">
-          <div class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+          <div class="card rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
             <p class="text-sm font-bold text-slate-900">One-on-One Learning</p>
             <p class="mt-1 text-sm text-slate-600">Personalized lessons tailored to each student’s pace.</p>
           </div>
-          <div class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+          <div class="card rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
             <p class="text-sm font-bold text-slate-900">24/7 Flexibility</p>
             <p class="mt-1 text-sm text-slate-600">Choose class timings that fit your routine and time zone.</p>
           </div>
-          <div class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+          <div class="card rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
             <p class="text-sm font-bold text-slate-900">Qualified Tutors</p>
             <p class="mt-1 text-sm text-slate-600">Certified teachers with Tajweed and Islamic education expertise.</p>
           </div>
-          <div class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+          <div class="card rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
             <p class="text-sm font-bold text-slate-900">Money-Back Guarantee</p>
             <p class="mt-1 text-sm text-slate-600">Your satisfaction matters — learn with confidence.</p>
           </div>
@@ -325,7 +337,7 @@
           </div>
 
           <div class="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-            <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+            <article class="card rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
               <h3 class="text-base font-extrabold">Noorani Qaida</h3>
               <p class="mt-2 text-sm text-slate-600">
                 Build a strong foundation: Arabic letters, Makharij, and basic rules of reading.
@@ -342,7 +354,7 @@
               </div>
             </article>
 
-            <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+            <article class="card rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
               <h3 class="text-base font-extrabold">Nazra with Tajweed</h3>
               <p class="mt-2 text-sm text-slate-600">
                 Read the Qur’an fluently with correct pronunciation and practical Tajweed application.
@@ -359,7 +371,7 @@
               </div>
             </article>
 
-            <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+            <article class="card rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
               <h3 class="text-base font-extrabold">Hifz-ul-Qur’an</h3>
               <p class="mt-2 text-sm text-slate-600">
                 Structured memorization with Sabak, Sabqi &amp; Manzil and regular progress tracking.
@@ -376,7 +388,7 @@
               </div>
             </article>
 
-            <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+            <article class="card rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
               <h3 class="text-base font-extrabold">Online Ijazah Program</h3>
               <p class="mt-2 text-sm text-slate-600">
                 Authentic certification (Sanad) in Tajweed recitation or Hifz — guided one-on-one.
@@ -408,27 +420,27 @@
           </div>
 
           <div class="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            <div class="rounded-2xl border border-slate-200 p-6">
+            <div class="card rounded-2xl border border-slate-200 p-6">
               <p class="text-base font-extrabold">Qualified &amp; Experienced Tutors</p>
               <p class="mt-2 text-sm text-slate-600">Certified teachers with strong Tajweed and teaching methodology.</p>
             </div>
-            <div class="rounded-2xl border border-slate-200 p-6">
+            <div class="card rounded-2xl border border-slate-200 p-6">
               <p class="text-base font-extrabold">Personalized One-on-One Classes</p>
               <p class="mt-2 text-sm text-slate-600">Every learner gets individual attention with a custom plan.</p>
             </div>
-            <div class="rounded-2xl border border-slate-200 p-6">
+            <div class="card rounded-2xl border border-slate-200 p-6">
               <p class="text-base font-extrabold">Child-Friendly Learning</p>
               <p class="mt-2 text-sm text-slate-600">Simple explanations, patience, and interactive teaching for kids.</p>
             </div>
-            <div class="rounded-2xl border border-slate-200 p-6">
+            <div class="card rounded-2xl border border-slate-200 p-6">
               <p class="text-base font-extrabold">Female Tutors for Sisters</p>
               <p class="mt-2 text-sm text-slate-600">Comfortable, modest learning with qualified female teachers.</p>
             </div>
-            <div class="rounded-2xl border border-slate-200 p-6">
+            <div class="card rounded-2xl border border-slate-200 p-6">
               <p class="text-base font-extrabold">Affordable &amp; Flexible Plans</p>
               <p class="mt-2 text-sm text-slate-600">Packages for 2–5 days/week and family discounts for siblings.</p>
             </div>
-            <div class="rounded-2xl border border-slate-200 p-6">
+            <div class="card rounded-2xl border border-slate-200 p-6">
               <p class="text-base font-extrabold">Money-Back Guarantee</p>
               <p class="mt-2 text-sm text-slate-600">We stand behind quality — learn with confidence and trust.</p>
             </div>
@@ -447,19 +459,19 @@
           </div>
 
           <div class="mt-8 grid gap-5 lg:grid-cols-3">
-            <figure class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+            <figure class="card rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
               <blockquote class="text-sm leading-relaxed text-slate-700">
                 “My daughter started from Qaida and now reads with confidence. The teacher is patient and corrects every mistake kindly.”
               </blockquote>
               <figcaption class="mt-4 text-sm font-semibold text-slate-900">— Parent of a 7-year-old</figcaption>
             </figure>
-            <figure class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+            <figure class="card rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
               <blockquote class="text-sm leading-relaxed text-slate-700">
                 “Flexible timing is a big help for our family. One-on-one classes mean my son stays focused and improves quickly.”
               </blockquote>
               <figcaption class="mt-4 text-sm font-semibold text-slate-900">— Parent (International)</figcaption>
             </figure>
-            <figure class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+            <figure class="card rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
               <blockquote class="text-sm leading-relaxed text-slate-700">
                 “As an adult learner, I needed a slow pace. The tutor explained Tajweed clearly and helped me fix common errors.”
               </blockquote>
@@ -480,15 +492,15 @@
                 Book a free trial, take your lesson, and continue with a personalized plan — no payment required for the trial.
               </p>
               <ol class="mt-6 grid gap-4 sm:grid-cols-3">
-                <li class="rounded-2xl border border-slate-200 p-5">
+                <li class="card rounded-2xl border border-slate-200 p-5">
                   <p class="text-sm font-extrabold">1) Book a Free Trial</p>
                   <p class="mt-2 text-sm text-slate-600">Schedule your complimentary one-on-one session.</p>
                 </li>
-                <li class="rounded-2xl border border-slate-200 p-5">
+                <li class="card rounded-2xl border border-slate-200 p-5">
                   <p class="text-sm font-extrabold">2) Take Your Lesson</p>
                   <p class="mt-2 text-sm text-slate-600">Experience our teaching quality and learning system.</p>
                 </li>
-                <li class="rounded-2xl border border-slate-200 p-5">
+                <li class="card rounded-2xl border border-slate-200 p-5">
                   <p class="text-sm font-extrabold">3) Start Learning Quran</p>
                   <p class="mt-2 text-sm text-slate-600">Enroll in your course and follow a structured plan.</p>
                 </li>
@@ -504,14 +516,14 @@
                 </p>
                 <div class="mt-6 flex flex-col gap-3">
                   <a
-                    class="inline-flex items-center justify-center rounded-xl bg-brand-emerald px-5 py-3 text-sm font-semibold text-white hover:bg-brand-emeraldDark"
+                    class="btn-primary inline-flex items-center justify-center rounded-xl px-5 py-3 text-sm font-semibold text-white"
                     href="https://wa.me/9203138883254?text=Assalam-o-Alaikum%2C%20I%27d%20like%20to%20book%20a%20free%20trial%20at%20Amina%20Quran%20Academy."
                     target="_blank"
                     rel="noopener"
                     >Book on WhatsApp</a
                   >
                   <a
-                    class="inline-flex items-center justify-center rounded-xl border border-white/15 bg-white/5 px-5 py-3 text-sm font-semibold text-white hover:bg-white/10"
+                    class="btn-secondary inline-flex items-center justify-center rounded-xl px-5 py-3 text-sm font-semibold text-white"
                     href="contact.html"
                     >Contact Details</a
                   >
@@ -525,8 +537,10 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-brand-ink text-white">
-      <div class="mx-auto max-w-7xl px-4 py-12">
+    <footer class="relative overflow-hidden bg-brand-ink text-white">
+      <div class="absolute inset-0 bg-arches opacity-25"></div>
+      <div class="pointer-events-none absolute inset-0 bg-noise"></div>
+      <div class="relative mx-auto max-w-7xl px-4 py-12">
         <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
           <div>
             <p class="text-lg font-extrabold">Amina Quran Academy</p>

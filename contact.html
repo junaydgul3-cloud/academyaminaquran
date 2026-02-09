@@ -8,14 +8,23 @@
       name="description"
       content="Contact Amina Quran Academy on WhatsApp or email to book a free trial. Location: D I Khan, KPK, Pakistan."
     />
+    <meta name="theme-color" content="#059669" />
     <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700;9..144,800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
 
     <script src="assets/js/tailwind-config.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="assets/css/site.css" />
   </head>
 
-  <body class="min-h-screen bg-white text-slate-900 antialiased">
+  <body class="min-h-screen bg-white font-sans text-slate-900 antialiased">
+    <a class="skip-link" href="#main">Skip to content</a>
     <!-- Top bar -->
     <div class="bg-brand-ink text-white">
       <div class="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-3 px-4 py-2 text-sm">
@@ -48,15 +57,16 @@
     </div>
 
     <!-- Header -->
-    <header class="sticky top-0 z-50 border-b border-slate-200/70 bg-white/80 backdrop-blur">
+    <header class="sticky top-0 z-50 glass-header">
       <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-4">
         <a href="index.html" class="group inline-flex items-center gap-3">
-          <span
-            class="grid h-11 w-11 place-items-center rounded-2xl bg-brand-emerald text-white shadow-soft ring-1 ring-black/5"
-            aria-hidden="true"
-          >
-            <span class="text-lg font-black">A</span>
-          </span>
+          <img
+            src="assets/images/logo-mark.svg"
+            alt="Amina Quran Academy"
+            class="h-11 w-11 rounded-2xl shadow-soft ring-1 ring-black/5"
+            loading="eager"
+            decoding="async"
+          />
           <span class="leading-tight">
             <span class="block text-base font-extrabold tracking-tight text-slate-900 group-hover:text-brand-emerald"
               >Amina Quran Academy</span
@@ -66,19 +76,19 @@
         </a>
 
         <nav class="hidden items-center gap-2 md:flex" aria-label="Primary">
-          <a class="rounded-lg px-3 py-2 text-sm font-semibold text-slate-700 hover:text-brand-emerald" href="index.html">Home</a>
-          <a class="rounded-lg px-3 py-2 text-sm font-semibold text-slate-700 hover:text-brand-emerald" href="about.html">About</a>
-          <a class="rounded-lg px-3 py-2 text-sm font-semibold text-slate-700 hover:text-brand-emerald" href="courses.html">Courses</a>
-          <a class="rounded-lg px-3 py-2 text-sm font-semibold text-slate-700 hover:text-brand-emerald" href="fees.html">Fees</a>
-          <a class="rounded-lg px-3 py-2 text-sm font-semibold text-brand-emerald" href="contact.html" aria-current="page">Contact</a>
-          <a class="rounded-lg px-3 py-2 text-sm font-semibold text-slate-700 hover:text-brand-emerald" href="resources/index.html"
+          <a class="nav-link rounded-lg px-3 py-2 text-sm font-semibold text-slate-700 hover:text-brand-emerald" href="index.html">Home</a>
+          <a class="nav-link rounded-lg px-3 py-2 text-sm font-semibold text-slate-700 hover:text-brand-emerald" href="about.html">About</a>
+          <a class="nav-link rounded-lg px-3 py-2 text-sm font-semibold text-slate-700 hover:text-brand-emerald" href="courses.html">Courses</a>
+          <a class="nav-link rounded-lg px-3 py-2 text-sm font-semibold text-slate-700 hover:text-brand-emerald" href="fees.html">Fees</a>
+          <a class="nav-link rounded-lg px-3 py-2 text-sm font-semibold text-brand-emerald" href="contact.html" aria-current="page">Contact</a>
+          <a class="nav-link rounded-lg px-3 py-2 text-sm font-semibold text-slate-700 hover:text-brand-emerald" href="resources/index.html"
             >Resources</a
           >
         </nav>
 
         <div class="flex items-center gap-2">
           <a
-            class="hidden rounded-xl bg-brand-emerald px-4 py-2 text-sm font-semibold text-white shadow-soft hover:bg-brand-emeraldDark md:inline-flex"
+            class="btn-primary hidden rounded-xl px-4 py-2 text-sm font-semibold text-white shadow-soft md:inline-flex"
             href="https://wa.me/9203138883254?text=Assalam-o-Alaikum%2C%20I%27d%20like%20to%20book%20a%20free%20trial%20at%20Amina%20Quran%20Academy."
             target="_blank"
             rel="noopener"
@@ -89,25 +99,29 @@
             type="button"
             aria-label="Open menu"
             aria-expanded="false"
+            aria-controls="mobile-menu"
             data-nav-toggle
           >
-            <span aria-hidden="true">Menu</span>
+            <span class="sr-only">Open menu</span>
+            <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16" />
+            </svg>
           </button>
         </div>
       </div>
 
       <!-- Mobile nav panel -->
-      <div class="hidden border-t border-slate-200 bg-white md:hidden" data-nav-panel>
+      <div id="mobile-menu" class="hidden border-t border-slate-200 bg-white md:hidden" data-nav-panel hidden>
         <nav class="mx-auto max-w-7xl px-4 py-3" aria-label="Mobile">
           <div class="grid gap-1">
-            <a class="rounded-lg px-3 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50" href="index.html">Home</a>
-            <a class="rounded-lg px-3 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50" href="about.html">About</a>
-            <a class="rounded-lg px-3 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50" href="courses.html">Courses</a>
-            <a class="rounded-lg px-3 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50" href="fees.html">Fees</a>
-            <a class="rounded-lg px-3 py-2 text-sm font-semibold text-brand-emerald" href="contact.html" aria-current="page">Contact</a>
-            <a class="rounded-lg px-3 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50" href="resources/index.html">Resources</a>
+            <a class="nav-link rounded-lg px-3 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50" href="index.html">Home</a>
+            <a class="nav-link rounded-lg px-3 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50" href="about.html">About</a>
+            <a class="nav-link rounded-lg px-3 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50" href="courses.html">Courses</a>
+            <a class="nav-link rounded-lg px-3 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50" href="fees.html">Fees</a>
+            <a class="nav-link rounded-lg px-3 py-2 text-sm font-semibold text-brand-emerald" href="contact.html" aria-current="page">Contact</a>
+            <a class="nav-link rounded-lg px-3 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50" href="resources/index.html">Resources</a>
             <a
-              class="mt-2 inline-flex items-center justify-center rounded-xl bg-brand-emerald px-4 py-2 text-sm font-semibold text-white shadow-soft hover:bg-brand-emeraldDark"
+              class="btn-primary mt-2 inline-flex items-center justify-center rounded-xl px-4 py-2 text-sm font-semibold text-white shadow-soft"
               href="https://wa.me/9203138883254?text=Assalam-o-Alaikum%2C%20I%27d%20like%20to%20book%20a%20free%20trial%20at%20Amina%20Quran%20Academy."
               target="_blank"
               rel="noopener"
@@ -118,14 +132,16 @@
       </div>
     </header>
 
-    <main>
+    <main id="main">
       <!-- Intro -->
-      <section class="bg-slate-50">
+      <section class="relative overflow-hidden bg-slate-50">
+        <div class="absolute inset-0 bg-orbs opacity-95"></div>
+        <div class="pointer-events-none absolute inset-0 bg-noise"></div>
         <div class="mx-auto max-w-7xl px-4 py-12">
           <div class="grid gap-8 lg:grid-cols-12 lg:items-end">
             <div class="lg:col-span-8">
               <p class="text-xs font-bold uppercase tracking-wider text-brand-emerald">Contact</p>
-              <h1 class="mt-2 text-3xl font-black tracking-tight text-slate-900 sm:text-4xl">Book your free trial class</h1>
+              <h1 class="hero-title mt-2 text-3xl font-black tracking-tight text-slate-900 sm:text-4xl">Book your free trial class</h1>
               <p class="mt-4 max-w-3xl text-sm leading-relaxed text-slate-600">
                 The fastest way to get started is WhatsApp. Send us a message and we’ll schedule your free trial at a time that fits your
                 routine (24/7 flexible scheduling).
@@ -133,7 +149,7 @@
             </div>
             <div class="lg:col-span-4 lg:flex lg:justify-end">
               <a
-                class="inline-flex w-full items-center justify-center rounded-xl bg-brand-emerald px-5 py-3 text-sm font-semibold text-white shadow-soft hover:bg-brand-emeraldDark lg:w-auto"
+                class="btn-primary inline-flex w-full items-center justify-center rounded-xl px-5 py-3 text-sm font-semibold text-white shadow-soft lg:w-auto"
                 href="https://wa.me/9203138883254?text=Assalam-o-Alaikum%2C%20I%27d%20like%20to%20book%20a%20free%20trial%20at%20Amina%20Quran%20Academy."
                 target="_blank"
                 rel="noopener"
@@ -148,12 +164,12 @@
       <section class="bg-white">
         <div class="mx-auto max-w-7xl px-4 py-12">
           <div class="grid gap-6 lg:grid-cols-3">
-            <div class="rounded-3xl border border-slate-200 bg-white p-7 shadow-sm">
+            <div class="card rounded-3xl border border-slate-200 bg-white p-7 shadow-sm">
               <p class="text-sm font-extrabold">WhatsApp</p>
               <p class="mt-2 text-sm text-slate-600">Tap to message with a pre-filled booking request.</p>
               <div class="mt-4 grid gap-3">
                 <a
-                  class="inline-flex items-center justify-center rounded-xl bg-brand-emerald px-4 py-2.5 text-sm font-semibold text-white hover:bg-brand-emeraldDark"
+                  class="btn-primary inline-flex items-center justify-center rounded-xl px-4 py-2.5 text-sm font-semibold text-white"
                   href="https://wa.me/9203138883254?text=Assalam-o-Alaikum%2C%20I%27d%20like%20to%20book%20a%20free%20trial%20at%20Amina%20Quran%20Academy."
                   target="_blank"
                   rel="noopener"
@@ -169,7 +185,7 @@
               </div>
             </div>
 
-            <div class="rounded-3xl border border-slate-200 bg-white p-7 shadow-sm">
+            <div class="card rounded-3xl border border-slate-200 bg-white p-7 shadow-sm">
               <p class="text-sm font-extrabold">Email</p>
               <p class="mt-2 text-sm text-slate-600">Send details about the student’s level and preferred timing.</p>
               <a class="mt-4 inline-flex w-full items-center justify-center rounded-xl border border-slate-200 px-4 py-2.5 text-sm font-semibold text-slate-700 hover:bg-slate-50" href="mailto:info.aminaquranacdemy@gmail.com"
@@ -178,7 +194,7 @@
               <p class="mt-4 text-xs text-slate-500">Tip: if you want a female tutor, mention “Female Teacher Required”.</p>
             </div>
 
-            <div class="rounded-3xl border border-slate-200 bg-white p-7 shadow-sm">
+            <div class="card rounded-3xl border border-slate-200 bg-white p-7 shadow-sm">
               <p class="text-sm font-extrabold">Location</p>
               <p class="mt-2 text-sm text-slate-600">D I Khan, KPK, Pakistan</p>
               <p class="mt-4 text-sm leading-relaxed text-slate-600">
@@ -210,7 +226,9 @@
       </section>
 
       <!-- CTA -->
-      <section class="bg-slate-50">
+      <section class="relative overflow-hidden bg-slate-50">
+        <div class="absolute inset-0 bg-orbs opacity-95"></div>
+        <div class="pointer-events-none absolute inset-0 bg-noise"></div>
         <div class="mx-auto max-w-7xl px-4 py-12">
           <div class="rounded-3xl bg-brand-ink p-8 text-white shadow-soft lg:p-10">
             <div class="grid gap-6 lg:grid-cols-12 lg:items-center">
@@ -222,7 +240,7 @@
               </div>
               <div class="lg:col-span-4 lg:flex lg:justify-end">
                 <a
-                  class="inline-flex w-full items-center justify-center rounded-xl bg-brand-emerald px-5 py-3 text-sm font-semibold text-white hover:bg-brand-emeraldDark lg:w-auto"
+                  class="btn-primary inline-flex w-full items-center justify-center rounded-xl px-5 py-3 text-sm font-semibold text-white lg:w-auto"
                   href="https://wa.me/9203138883254?text=Assalam-o-Alaikum%2C%20I%27d%20like%20to%20book%20a%20free%20trial%20at%20Amina%20Quran%20Academy."
                   target="_blank"
                   rel="noopener"
@@ -237,8 +255,10 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-brand-ink text-white">
-      <div class="mx-auto max-w-7xl px-4 py-12">
+    <footer class="relative overflow-hidden bg-brand-ink text-white">
+      <div class="absolute inset-0 bg-arches opacity-25"></div>
+      <div class="pointer-events-none absolute inset-0 bg-noise"></div>
+      <div class="relative mx-auto max-w-7xl px-4 py-12">
         <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
           <div>
             <p class="text-lg font-extrabold">Amina Quran Academy</p>

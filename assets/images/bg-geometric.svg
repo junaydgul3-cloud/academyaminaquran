@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" preserveAspectRatio="none" role="img" aria-label="Geometric background">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0B1220"/>
+      <stop offset="1" stop-color="#052e2a"/>
+    </linearGradient>
+    <radialGradient id="gold" cx="20%" cy="10%" r="65%">
+      <stop offset="0" stop-color="#D8B25C" stop-opacity="0.32"/>
+      <stop offset="1" stop-color="#D8B25C" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="emerald" cx="85%" cy="20%" r="70%">
+      <stop offset="0" stop-color="#059669" stop-opacity="0.26"/>
+      <stop offset="1" stop-color="#059669" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="p" width="120" height="120" patternUnits="userSpaceOnUse">
+      <path d="M60 6l22 22-22 22-22-22L60 6Zm0 44l22 22-22 22-22-22 22-22Z" fill="none" stroke="#F3E6C7" stroke-opacity="0.16" stroke-width="2"/>
+      <path d="M6 60l22-22 22 22-22 22L6 60Zm44 0l22-22 22 22-22 22-22-22Z" fill="none" stroke="#F3E6C7" stroke-opacity="0.10" stroke-width="2"/>
+      <circle cx="60" cy="60" r="3" fill="#D8B25C" fill-opacity="0.18"/>
+    </pattern>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#gold)"/>
+  <rect width="1600" height="900" fill="url(#emerald)"/>
+  <rect width="1600" height="900" fill="url(#p)" opacity="0.9"/>
+</svg>
+
