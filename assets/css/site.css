@@ -283,3 +283,31 @@ footer a[aria-label] svg {
   display: block;
 }
 
+/* ------------------------------------------------------------
+   Tailwind CDN hardening (PRODUCTION FALLBACKS)
+   If Tailwind config fails to load for any reason, custom utility
+   classes like `bg-brand-ink` won't exist. These CSS fallbacks
+   keep critical UI readable (top bar, footer, buttons).
+------------------------------------------------------------ */
+
+.bg-brand-ink { background-color: #0B1220; }
+.text-brand-ink { color: #0B1220; }
+
+.bg-brand-emerald { background-color: #059669; }
+.bg-brand-emeraldDark { background-color: #047857; }
+.text-brand-emerald { color: #059669; }
+
+.bg-brand-gold { background-color: #D8B25C; }
+.text-brand-gold { color: #D8B25C; }
+.bg-brand-goldSoft { background-color: #F3E6C7; }
+
+/* Hover variants (escape `:` in CSS selectors) */
+.hover\\:bg-brand-emeraldDark:hover { background-color: #047857; }
+.hover\\:bg-brand-emerald:hover { background-color: #059669; }
+.hover\\:text-brand-emerald:hover { color: #059669; }
+.hover\\:underline:hover { text-decoration: underline; }
+
+/* Custom shadow utilities (match our Tailwind config names) */
+.shadow-soft { box-shadow: 0 10px 30px rgba(2, 6, 23, 0.10); }
+.shadow-glow { box-shadow: 0 18px 60px rgba(5, 150, 105, 0.22); }
+
