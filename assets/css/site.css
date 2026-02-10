@@ -20,6 +20,66 @@ body {
   background: radial-gradient(900px 500px at 10% 0%, rgba(216, 178, 92, 0.14), transparent 55%),
     radial-gradient(900px 600px at 100% 10%, rgba(5, 150, 105, 0.12), transparent 55%),
     linear-gradient(180deg, #ffffff, var(--bg));
+  font-size: 16.5px;
+}
+
+/* Improve readability site-wide (without touching every class) */
+main .text-slate-600 {
+  color: #334155; /* slate-700-ish for stronger contrast */
+}
+main .text-white\/80 {
+  color: rgba(255, 255, 255, 0.88);
+}
+main .text-sm {
+  font-size: 0.97rem;
+  line-height: 1.7;
+}
+main .text-xs {
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.section-divider {
+  height: 1px;
+  background: linear-gradient(90deg, rgba(5,150,105,0), rgba(5,150,105,0.35), rgba(216,178,92,0.35), rgba(216,178,92,0));
+}
+
+/* Real photo wallpapers (downloaded free-licensed images) */
+.bg-wallpaper-mosque {
+  background-image: url("../images/wallpapers/mosque.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.bg-wallpaper-calligraphy {
+  background-image: url("../images/wallpapers/calligraphy.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.bg-wallpaper-pattern {
+  background-image: url("../images/wallpapers/pattern.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.bg-wallpaper-quran {
+  background-image: url("../images/wallpapers/quran.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.bg-overlay-dark {
+  position: relative;
+}
+.bg-overlay-dark::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(900px 520px at 18% 15%, rgba(216, 178, 92, 0.20), transparent 55%),
+    radial-gradient(900px 520px at 85% 10%, rgba(5, 150, 105, 0.18), transparent 55%),
+    linear-gradient(180deg, rgba(11, 18, 32, 0.78), rgba(11, 18, 32, 0.88));
+}
+.bg-overlay-dark > * {
+  position: relative;
 }
 
 /* More visible focus for keyboard users */

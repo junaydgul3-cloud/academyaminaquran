@@ -1,0 +1,62 @@
+[
+  {
+    "key": "mosque",
+    "filename": "mosque.jpg",
+    "title": "File:Agha Bozorg Mosque, Kashan, Iran.jpg",
+    "source": "https://upload.wikimedia.org/wikipedia/commons/a/a6/Agha_Bozorg_Mosque%2C_Kashan%2C_Iran.jpg",
+    "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Agha_Bozorg_Mosque%2C_Kashan%2C_Iran.jpg/3840px-Agha_Bozorg_Mosque%2C_Kashan%2C_Iran.jpg",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "artist": "<a href=\"//commons.wikimedia.org/wiki/User:Amirpashaei\" title=\"User:Amirpashaei\">Amirpashaei</a>",
+    "credit": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+    "attributionRequired": "true",
+    "width": 10302,
+    "height": 10037,
+    "mime": "image/jpeg"
+  },
+  {
+    "key": "quran",
+    "filename": "quran.jpg",
+    "title": "File:Quran - year 1874 - Page 103.jpg",
+    "source": "https://upload.wikimedia.org/wikipedia/commons/7/73/Quran_-_year_1874_-_Page_103.jpg",
+    "thumb": "https://upload.wikimedia.org/wikipedia/commons/7/73/Quran_-_year_1874_-_Page_103.jpg",
+    "license": "Public domain",
+    "licenseUrl": null,
+    "artist": "<div class=\"fn value\">\nQuran is word of Allah Ta'ala</div>",
+    "credit": "Scanned by alazharonline. Uploaded by <a href=\"//commons.wikimedia.org/wiki/User:Tarawneh\" title=\"User:Tarawneh\">Tarawneh</a>.",
+    "attributionRequired": "false",
+    "width": 830,
+    "height": 1269,
+    "mime": "image/jpeg"
+  },
+  {
+    "key": "pattern",
+    "filename": "pattern.jpg",
+    "title": "File:Isfahan 1210600 nevit.jpg",
+    "source": "https://upload.wikimedia.org/wikipedia/commons/d/d6/Isfahan_1210600_nevit.jpg",
+    "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Isfahan_1210600_nevit.jpg/3072px-Isfahan_1210600_nevit.jpg",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "artist": "<a href=\"//commons.wikimedia.org/wiki/User:Nevit\" title=\"User:Nevit\">Nevit Dilmen</a> (<a href=\"//commons.wikimedia.org/wiki/User_talk:Nevit\" title=\"User talk:Nevit\"><span class=\"signature-talk\">talk</span></a>)",
+    "credit": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+    "attributionRequired": "true",
+    "width": 3072,
+    "height": 2304,
+    "mime": "image/jpeg"
+  },
+  {
+    "key": "calligraphy",
+    "filename": "calligraphy.jpg",
+    "title": "File:Khalili Collection Hajj and Arts of Pilgrimage Talismanic shirt.jpg",
+    "source": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Khalili_Collection_Hajj_and_Arts_of_Pilgrimage_Talismanic_shirt.jpg",
+    "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Khalili_Collection_Hajj_and_Arts_of_Pilgrimage_Talismanic_shirt.jpg/3840px-Khalili_Collection_Hajj_and_Arts_of_Pilgrimage_Talismanic_shirt.jpg",
+    "license": "CC BY-SA 3.0 igo",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/igo/deed.en",
+    "artist": "Khalili Collections",
+    "credit": "Khalili Collections",
+    "attributionRequired": "true",
+    "width": 8192,
+    "height": 7542,
+    "mime": "image/jpeg"
+  }
+]
