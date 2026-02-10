@@ -73,6 +73,7 @@ main .text-xs {
   content: "";
   position: absolute;
   inset: 0;
+  pointer-events: none;
   background:
     radial-gradient(900px 520px at 18% 15%, rgba(216, 178, 92, 0.20), transparent 55%),
     radial-gradient(900px 520px at 85% 10%, rgba(5, 150, 105, 0.18), transparent 55%),
@@ -80,6 +81,27 @@ main .text-xs {
 }
 .bg-overlay-dark > * {
   position: relative;
+}
+
+/* Footer social icons: more visible, modern */
+footer a[aria-label] {
+  background: rgba(255, 255, 255, 0.14) !important;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+footer a[aria-label]:hover {
+  background: rgba(255, 255, 255, 0.20) !important;
+  transform: translateY(-1px);
+}
+footer a[aria-label] svg {
+  width: 22px;
+  height: 22px;
+}
+
+/* Arabic wordmark helper */
+.logo-ar {
+  font-family: "Amiri", "Noto Naskh Arabic", serif;
+  font-weight: 700;
+  letter-spacing: 0;
 }
 
 /* More visible focus for keyboard users */

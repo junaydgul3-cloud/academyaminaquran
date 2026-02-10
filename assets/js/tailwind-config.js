@@ -1,5 +1,7 @@
-/* Tailwind CDN config (must load BEFORE https://cdn.tailwindcss.com) */
-tailwind.config = {
+/* Tailwind CDN config
+   IMPORTANT: avoid ReferenceError if `tailwind` isn't defined yet. */
+window.tailwind = window.tailwind || {};
+window.tailwind.config = {
   theme: {
     extend: {
       colors: {
