@@ -15,6 +15,7 @@ function setupMobileNav() {
   const setOpen = (open) => {
     toggle.setAttribute("aria-expanded", open ? "true" : "false");
     panel.classList.toggle("hidden", !open);
+    panel.toggleAttribute("hidden", !open);
   };
 
   setOpen(false);
@@ -29,6 +30,13 @@ function setupMobileNav() {
     const target = e.target;
     if (!(target instanceof Element)) return;
     if (target.closest("a")) setOpen(false);
+  });
+
+  // Close on Escape
+  document.addEventListener("keydown", (e) => {
+    if (e.key !== "Escape") return;
+    const isOpen = toggle.getAttribute("aria-expanded") === "true";
+    if (isOpen) setOpen(false);
   });
 }
 

@@ -1,7 +1,25 @@
-/* Small custom layer for brand polish beyond Tailwind utilities */
+/* Amina Quran Academy design system + polish (Tailwind CDN + custom CSS) */
+
+:root {
+  --ink: #0b1220;
+  --emerald: #059669;
+  --emerald-700: #047857;
+  --gold: #d8b25c;
+  --gold-soft: #f3e6c7;
+  --bg: #f7faf9;
+  --card: rgba(255, 255, 255, 0.78);
+  --border: rgba(15, 23, 42, 0.10);
+  --shadow: 0 14px 40px rgba(2, 6, 23, 0.10);
+}
 
 html {
   scroll-behavior: smooth;
+}
+
+body {
+  background: radial-gradient(900px 500px at 10% 0%, rgba(216, 178, 92, 0.14), transparent 55%),
+    radial-gradient(900px 600px at 100% 10%, rgba(5, 150, 105, 0.12), transparent 55%),
+    linear-gradient(180deg, #ffffff, var(--bg));
 }
 
 /* More visible focus for keyboard users */
@@ -10,11 +28,169 @@ html {
   outline-offset: 2px;
 }
 
+.skip-link {
+  position: absolute;
+  left: 12px;
+  top: 12px;
+  transform: translateY(-140%);
+  transition: transform 200ms ease;
+  z-index: 1000;
+  background: #fff;
+  color: var(--ink);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 10px 12px;
+  box-shadow: var(--shadow);
+}
+.skip-link:focus {
+  transform: translateY(0);
+}
+
 .bg-mesh {
   background-image:
     radial-gradient(900px 400px at 10% 10%, rgba(216, 178, 92, 0.22), transparent 55%),
     radial-gradient(700px 360px at 90% 20%, rgba(5, 150, 105, 0.22), transparent 55%),
     radial-gradient(600px 320px at 60% 100%, rgba(216, 178, 92, 0.12), transparent 55%);
+}
+
+/* Background visuals (SVGs live in assets/images/) */
+.bg-geometric {
+  background-image: url("../images/bg-geometric.svg");
+  background-size: cover;
+  background-position: center;
+}
+.bg-orbs {
+  background-image: url("../images/bg-orbs.svg");
+  background-size: cover;
+  background-position: center;
+}
+.bg-arches {
+  background-image: url("../images/bg-arches.svg");
+  background-size: cover;
+  background-position: center;
+}
+.bg-noise {
+  background-image: url("../images/bg-noise.svg");
+  background-size: 360px 360px;
+  background-repeat: repeat;
+  opacity: 0.35;
+}
+
+/* Glass header + nav link style */
+.glass-header {
+  background: rgba(255, 255, 255, 0.62);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+  box-shadow: 0 10px 30px rgba(2, 6, 23, 0.06);
+}
+.nav-link {
+  position: relative;
+}
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  bottom: 7px;
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(5, 150, 105, 0), rgba(5, 150, 105, 0.7), rgba(216, 178, 92, 0.7), rgba(216, 178, 92, 0));
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 200ms ease;
+}
+.nav-link:hover::after,
+.nav-link[aria-current="page"]::after {
+  transform: scaleX(1);
+}
+
+/* Buttons */
+.btn-primary {
+  background: linear-gradient(135deg, var(--emerald), var(--emerald-700));
+  box-shadow: 0 14px 40px rgba(5, 150, 105, 0.22);
+}
+.btn-primary:hover {
+  filter: brightness(1.03);
+}
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+/* Cards: subtle gradient border + hover lift */
+.card {
+  position: relative;
+  isolation: isolate;
+}
+.card::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: 24px;
+  background: linear-gradient(135deg, rgba(5, 150, 105, 0.35), rgba(216, 178, 92, 0.30), rgba(2, 6, 23, 0));
+  opacity: 0.0;
+  transition: opacity 220ms ease;
+  z-index: -1;
+}
+.card:hover::before,
+.card:focus-within::before {
+  opacity: 1;
+}
+.card:hover,
+.card:focus-within {
+  transform: translateY(-3px);
+  transition: transform 220ms ease, box-shadow 220ms ease;
+  box-shadow: var(--shadow);
+}
+
+/* Hero title: premium gradient text */
+.hero-title {
+  font-family: "Fraunces", ui-serif, Georgia, serif;
+  letter-spacing: -0.02em;
+}
+.hero-gradient {
+  background: linear-gradient(90deg, #ffffff 0%, #f3e6c7 35%, #bff3e0 70%, #ffffff 100%);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: shine 7s ease-in-out infinite;
+}
+
+/* Carousel: add a gentle Ken Burns effect on active slide */
+[data-carousel] [data-slide].is-active img {
+  transform: scale(1.02);
+  animation: kenburns 9s ease-in-out infinite;
+}
+
+@keyframes kenburns {
+  0% { transform: scale(1.02) translateY(0); }
+  50% { transform: scale(1.07) translateY(-8px); }
+  100% { transform: scale(1.02) translateY(0); }
+}
+
+@keyframes shine {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-gradient {
+    animation: none;
+  }
+  [data-carousel] [data-slide].is-active img {
+    animation: none;
+    transform: none;
+  }
+  .card:hover,
+  .card:focus-within {
+    transform: none;
+  }
 }
 
 /* Optional: prevent layout shift when carousel hides non-active slides */

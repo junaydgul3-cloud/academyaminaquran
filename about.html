@@ -8,14 +8,23 @@
       name="description"
       content="Amina Quran Academy is dedicated to providing authentic, interactive Quran education worldwide through qualified tutors and modern online learning."
     />
+    <meta name="theme-color" content="#059669" />
     <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700;9..144,800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
 
     <script src="assets/js/tailwind-config.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="assets/css/site.css" />
   </head>
 
-  <body class="min-h-screen bg-white text-slate-900 antialiased">
+  <body class="min-h-screen bg-white font-sans text-slate-900 antialiased">
+    <a class="skip-link" href="#main">Skip to content</a>
     <!-- Top bar -->
     <div class="bg-brand-ink text-white">
       <div class="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-3 px-4 py-2 text-sm">
@@ -48,15 +57,16 @@
     </div>
 
     <!-- Header -->
-    <header class="sticky top-0 z-50 border-b border-slate-200/70 bg-white/80 backdrop-blur">
+    <header class="sticky top-0 z-50 glass-header">
       <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-4">
         <a href="index.html" class="group inline-flex items-center gap-3">
-          <span
-            class="grid h-11 w-11 place-items-center rounded-2xl bg-brand-emerald text-white shadow-soft ring-1 ring-black/5"
-            aria-hidden="true"
-          >
-            <span class="text-lg font-black">A</span>
-          </span>
+          <img
+            src="assets/images/logo-mark.svg"
+            alt="Amina Quran Academy"
+            class="h-11 w-11 rounded-2xl shadow-soft ring-1 ring-black/5"
+            loading="eager"
+            decoding="async"
+          />
           <span class="leading-tight">
             <span class="block text-base font-extrabold tracking-tight text-slate-900 group-hover:text-brand-emerald"
               >Amina Quran Academy</span
@@ -66,19 +76,19 @@
         </a>
 
         <nav class="hidden items-center gap-2 md:flex" aria-label="Primary">
-          <a class="rounded-lg px-3 py-2 text-sm font-semibold text-slate-700 hover:text-brand-emerald" href="index.html">Home</a>
-          <a class="rounded-lg px-3 py-2 text-sm font-semibold text-brand-emerald" href="about.html" aria-current="page">About</a>
-          <a class="rounded-lg px-3 py-2 text-sm font-semibold text-slate-700 hover:text-brand-emerald" href="courses.html">Courses</a>
-          <a class="rounded-lg px-3 py-2 text-sm font-semibold text-slate-700 hover:text-brand-emerald" href="fees.html">Fees</a>
-          <a class="rounded-lg px-3 py-2 text-sm font-semibold text-slate-700 hover:text-brand-emerald" href="contact.html">Contact</a>
-          <a class="rounded-lg px-3 py-2 text-sm font-semibold text-slate-700 hover:text-brand-emerald" href="resources/index.html"
+          <a class="nav-link rounded-lg px-3 py-2 text-sm font-semibold text-slate-700 hover:text-brand-emerald" href="index.html">Home</a>
+          <a class="nav-link rounded-lg px-3 py-2 text-sm font-semibold text-brand-emerald" href="about.html" aria-current="page">About</a>
+          <a class="nav-link rounded-lg px-3 py-2 text-sm font-semibold text-slate-700 hover:text-brand-emerald" href="courses.html">Courses</a>
+          <a class="nav-link rounded-lg px-3 py-2 text-sm font-semibold text-slate-700 hover:text-brand-emerald" href="fees.html">Fees</a>
+          <a class="nav-link rounded-lg px-3 py-2 text-sm font-semibold text-slate-700 hover:text-brand-emerald" href="contact.html">Contact</a>
+          <a class="nav-link rounded-lg px-3 py-2 text-sm font-semibold text-slate-700 hover:text-brand-emerald" href="resources/index.html"
             >Resources</a
           >
         </nav>
 
         <div class="flex items-center gap-2">
           <a
-            class="hidden rounded-xl bg-brand-emerald px-4 py-2 text-sm font-semibold text-white shadow-soft hover:bg-brand-emeraldDark md:inline-flex"
+            class="btn-primary hidden rounded-xl px-4 py-2 text-sm font-semibold text-white shadow-soft md:inline-flex"
             href="https://wa.me/9203138883254?text=Assalam-o-Alaikum%2C%20I%27d%20like%20to%20book%20a%20free%20trial%20at%20Amina%20Quran%20Academy."
             target="_blank"
             rel="noopener"
@@ -89,25 +99,29 @@
             type="button"
             aria-label="Open menu"
             aria-expanded="false"
+            aria-controls="mobile-menu"
             data-nav-toggle
           >
-            <span aria-hidden="true">Menu</span>
+            <span class="sr-only">Open menu</span>
+            <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16" />
+            </svg>
           </button>
         </div>
       </div>
 
       <!-- Mobile nav panel -->
-      <div class="hidden border-t border-slate-200 bg-white md:hidden" data-nav-panel>
+      <div id="mobile-menu" class="hidden border-t border-slate-200 bg-white md:hidden" data-nav-panel hidden>
         <nav class="mx-auto max-w-7xl px-4 py-3" aria-label="Mobile">
           <div class="grid gap-1">
-            <a class="rounded-lg px-3 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50" href="index.html">Home</a>
-            <a class="rounded-lg px-3 py-2 text-sm font-semibold text-brand-emerald" href="about.html" aria-current="page">About</a>
-            <a class="rounded-lg px-3 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50" href="courses.html">Courses</a>
-            <a class="rounded-lg px-3 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50" href="fees.html">Fees</a>
-            <a class="rounded-lg px-3 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50" href="contact.html">Contact</a>
-            <a class="rounded-lg px-3 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50" href="resources/index.html">Resources</a>
+            <a class="nav-link rounded-lg px-3 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50" href="index.html">Home</a>
+            <a class="nav-link rounded-lg px-3 py-2 text-sm font-semibold text-brand-emerald" href="about.html" aria-current="page">About</a>
+            <a class="nav-link rounded-lg px-3 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50" href="courses.html">Courses</a>
+            <a class="nav-link rounded-lg px-3 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50" href="fees.html">Fees</a>
+            <a class="nav-link rounded-lg px-3 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50" href="contact.html">Contact</a>
+            <a class="nav-link rounded-lg px-3 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50" href="resources/index.html">Resources</a>
             <a
-              class="mt-2 inline-flex items-center justify-center rounded-xl bg-brand-emerald px-4 py-2 text-sm font-semibold text-white shadow-soft hover:bg-brand-emeraldDark"
+              class="btn-primary mt-2 inline-flex items-center justify-center rounded-xl px-4 py-2 text-sm font-semibold text-white shadow-soft"
               href="https://wa.me/9203138883254?text=Assalam-o-Alaikum%2C%20I%27d%20like%20to%20book%20a%20free%20trial%20at%20Amina%20Quran%20Academy."
               target="_blank"
               rel="noopener"
@@ -118,14 +132,19 @@
       </div>
     </header>
 
-    <main>
+    <main id="main">
       <!-- Hero -->
-      <section class="bg-brand-ink">
-        <div class="mx-auto max-w-7xl px-4 py-12">
+      <section class="relative overflow-hidden bg-brand-ink">
+        <div class="absolute inset-0 bg-arches opacity-75"></div>
+        <div class="absolute inset-0 bg-mesh opacity-60"></div>
+        <div class="pointer-events-none absolute inset-0 bg-noise"></div>
+        <div class="relative mx-auto max-w-7xl px-4 py-12">
           <div class="grid gap-8 lg:grid-cols-12 lg:items-center">
             <div class="lg:col-span-7">
               <p class="text-xs font-bold uppercase tracking-wider text-brand-gold">About us</p>
-              <h1 class="mt-2 text-3xl font-black tracking-tight text-white sm:text-4xl">Welcome to the Best Online Quran Academy</h1>
+              <h1 class="hero-title hero-gradient mt-2 text-3xl font-black tracking-tight sm:text-4xl">
+                Welcome to the Best Online Quran Academy
+              </h1>
               <p class="mt-4 max-w-2xl text-base leading-relaxed text-white/80">
                 Amina Quran Academy is dedicated to providing high-quality, authentic Quran education to students of all ages across the
                 globe. Our mission is to make Quran learning accessible, interactive, and effective — combining traditional teaching with
@@ -133,21 +152,21 @@
               </p>
               <div class="mt-6 flex flex-col gap-3 sm:flex-row">
                 <a
-                  class="inline-flex items-center justify-center rounded-xl bg-brand-emerald px-5 py-3 text-sm font-semibold text-white shadow-soft hover:bg-brand-emeraldDark"
+                  class="btn-primary inline-flex items-center justify-center rounded-xl px-5 py-3 text-sm font-semibold text-white shadow-soft"
                   href="https://wa.me/9203138883254?text=Assalam-o-Alaikum%2C%20I%27d%20like%20to%20book%20a%20free%20trial%20at%20Amina%20Quran%20Academy."
                   target="_blank"
                   rel="noopener"
                   >Book a Free Trial</a
                 >
                 <a
-                  class="inline-flex items-center justify-center rounded-xl border border-white/20 bg-white/5 px-5 py-3 text-sm font-semibold text-white hover:bg-white/10"
+                  class="btn-secondary inline-flex items-center justify-center rounded-xl px-5 py-3 text-sm font-semibold text-white"
                   href="courses.html"
                   >Explore Courses</a
                 >
               </div>
             </div>
             <div class="lg:col-span-5">
-              <div class="rounded-3xl bg-white/5 p-6 text-white ring-1 ring-white/10">
+              <div class="card rounded-3xl bg-white/5 p-6 text-white ring-1 ring-white/10">
                 <p class="text-sm font-semibold text-white/80">Our promise</p>
                 <ul class="mt-4 grid gap-3 text-sm text-white/80">
                   <li class="flex gap-3">
@@ -177,7 +196,7 @@
       <section class="bg-white">
         <div class="mx-auto max-w-7xl px-4 py-12">
           <div class="grid gap-8 lg:grid-cols-2">
-            <div class="rounded-3xl border border-slate-200 bg-white p-7 shadow-sm">
+            <div class="card rounded-3xl border border-slate-200 bg-white p-7 shadow-sm">
               <h2 class="text-xl font-extrabold tracking-tight">Our Mission</h2>
               <p class="mt-3 text-sm leading-relaxed text-slate-600">
                 To provide authentic, interactive Quran education worldwide through qualified tutors, modern online methods, and a safe,
@@ -188,7 +207,7 @@
                 connection with Islamic values.
               </p>
             </div>
-            <div class="rounded-3xl border border-slate-200 bg-white p-7 shadow-sm">
+            <div class="card rounded-3xl border border-slate-200 bg-white p-7 shadow-sm">
               <h2 class="text-xl font-extrabold tracking-tight">Our Vision</h2>
               <p class="mt-3 text-sm leading-relaxed text-slate-600">
                 To empower every Muslim with authentic Quranic knowledge, foster a lifelong love for the Qur’an, and produce confident
@@ -216,27 +235,27 @@
             </p>
           </div>
           <div class="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+            <div class="card rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
               <p class="text-base font-extrabold">Qualified &amp; Experienced Tutors</p>
               <p class="mt-2 text-sm text-slate-600">Deep knowledge of Tajweed and Hifz with years of teaching experience.</p>
             </div>
-            <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+            <div class="card rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
               <p class="text-base font-extrabold">Personalized One-on-One Classes</p>
               <p class="mt-2 text-sm text-slate-600">Lessons tailored to each student’s pace and level.</p>
             </div>
-            <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+            <div class="card rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
               <p class="text-base font-extrabold">Flexible Schedule</p>
               <p class="mt-2 text-sm text-slate-600">Convenient online classes for students worldwide across time zones.</p>
             </div>
-            <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+            <div class="card rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
               <p class="text-base font-extrabold">Child-Friendly Methods</p>
               <p class="mt-2 text-sm text-slate-600">Interactive and engaging strategies to make learning enjoyable for kids.</p>
             </div>
-            <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+            <div class="card rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
               <p class="text-base font-extrabold">Affordable &amp; Accessible Worldwide</p>
               <p class="mt-2 text-sm text-slate-600">Reasonable tuition plans with family discounts for siblings.</p>
             </div>
-            <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+            <div class="card rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
               <p class="text-base font-extrabold">Safe &amp; Supportive Environment</p>
               <p class="mt-2 text-sm text-slate-600">A respectful space for boys &amp; girls, including certified female tutors.</p>
             </div>
@@ -257,7 +276,7 @@
               </div>
               <div class="lg:col-span-4 lg:flex lg:justify-end">
                 <a
-                  class="inline-flex w-full items-center justify-center rounded-xl bg-brand-emerald px-5 py-3 text-sm font-semibold text-white hover:bg-brand-emeraldDark lg:w-auto"
+                  class="btn-primary inline-flex w-full items-center justify-center rounded-xl px-5 py-3 text-sm font-semibold text-white lg:w-auto"
                   href="https://wa.me/9203138883254?text=Assalam-o-Alaikum%2C%20I%27d%20like%20to%20book%20a%20free%20trial%20at%20Amina%20Quran%20Academy."
                   target="_blank"
                   rel="noopener"
@@ -271,8 +290,10 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-brand-ink text-white">
-      <div class="mx-auto max-w-7xl px-4 py-12">
+    <footer class="relative overflow-hidden bg-brand-ink text-white">
+      <div class="absolute inset-0 bg-arches opacity-25"></div>
+      <div class="pointer-events-none absolute inset-0 bg-noise"></div>
+      <div class="relative mx-auto max-w-7xl px-4 py-12">
         <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
           <div>
             <p class="text-lg font-extrabold">Amina Quran Academy</p>
